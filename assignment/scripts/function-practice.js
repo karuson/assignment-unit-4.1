@@ -98,17 +98,6 @@ console.log(find('Snoopy', dogs), 'should be false');
 console.log(find('Roone', dogs), 'should be true');
 console.log(find('Rudy', dogs), 'should be true');
 
-
-// NOT DONE
-// function find(value, array) {
-//   for (let i=0; i<=array.length; i++) {
-//     if (array[i] === value) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   } // end for of
-// }
 // ----------------------
 // Stretch Goals
 // ----------------------
