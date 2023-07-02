@@ -17,7 +17,7 @@ function helloName(name) {
   return `${"Hello,"} ${name}${"!"}`
 }
 // Remember to call the function to test
-console.log( 'Testing - should say "Hello, Ben!"', helloName("Ben") );
+console.log('Testing - should say "Hello, Ben!"', helloName("Ben"));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(num0, num1) {
@@ -29,7 +29,7 @@ function addNumbers(num0, num1) {
 console.log("Testing - should get 105 for answer", addNumbers(17, 88));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( num0, num1, num2 ) {
+function multiplyThree(num0, num1, num2) {
   let answer = num0 * num1 * num2;
   return answer;
 }
@@ -42,7 +42,7 @@ function isPositive(number) {
   if (number > 0) {
     return true;
   } else {
-  return false;
+    return false;
   } // end if
 } // end isPositive
 
@@ -70,36 +70,59 @@ console.log('should log undefined', getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
-//    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
+//    DO NOT use Array.includes, Array.indexOf, or Array.find
 
-}
+// Create a function `find`
+// Input value, search array with loop, return true or false
+// Loop inside the function to search all the indexes of the array
+
+function find(value, array) {
+  console.log('in find function, looking for', value);
+
+  // loop through the array and check each index for `value`
+  for (i in array) {
+    console.log('In for loop,', array[i]); 
+    if (array[i] == value) {
+      console.log(`Found ${value}!`);
+      return true;
+    } // end if
+  } // end for
+  // if value is not found in array return false
+  console.log(`${value} not found`);
+  return false;
+} // end find function
+
+// let's run some tests with family dogs 
+dogs = ['Karlsson', 'Roone', 'Aldous', 'Rudy'];
+console.log(find('Snoopy', dogs), 'should be false');
+console.log(find('Roone', dogs), 'should be true');
+console.log(find('Rudy', dogs), 'should be true');
+
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
+// function isFirstLetter(letter, string) {
 
-}
-console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
-console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
+// }
+// console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
+// console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
-// 9. Function to return the sum of all numbers in an array
-function sumAll() {
-  let sum = 0;
-  // TODO: loop to add items
+// // 9. Function to return the sum of all numbers in an array
+// function sumAll() {
+//   // TODO: loop to add items
 
-  // TODO: return the sum
-}
+//   // TODO: return the sum
+// }
 
-// 10. Function to return a new array of all positive (greater than zero)
-//     numbers contained in an input array. If there are no positive numbers
-//     return an empty array. Note: The input array should not change.
-function allPositive() {
+// // 10. Function to return a new array of all positive (greater than zero)
+// //     numbers contained in an input array. If there are no positive numbers
+// //     return an empty array. Note: The input array should not change.
+// function allPositive() {
 
-}
+// }
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
